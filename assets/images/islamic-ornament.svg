@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="35%" stop-color="#F3E5AB" />
+      <stop offset="70%" stop-color="#B89A65" />
+      <stop offset="100%" stop-color="#8C6D31" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#8C6D31" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Decorative Ring -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="2,3" opacity="0.7"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.9"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- 8-Pointed Star (Rub el Hizb) Outer -->
+  <g transform="translate(100,100)" stroke="url(#goldGrad)" stroke-width="1.6" fill="none" filter="url(#goldGlow)">
+    <!-- Square 1 -->
+    <rect x="-56" y="-56" width="112" height="112" rx="4" transform="rotate(0)" />
+    <!-- Square 2 -->
+    <rect x="-56" y="-56" width="112" height="112" rx="4" transform="rotate(45)" />
+
+    <!-- Inner Star (Interlacing) -->
+    <polygon points="
+      0,-68 18,-42 48,-48 42,-18 68,0 42,18 48,48 18,42
+      0,68 -18,42 -48,48 -42,18 -68,0 -42,-18 -48,-48 -18,-42"
+      fill="rgba(241, 235, 221, 0.25)" stroke="url(#goldGrad)" stroke-width="1.2"/>
+
+    <!-- Inner 8-pointed star -->
+    <rect x="-32" y="-32" width="64" height="64" transform="rotate(22.5)" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.8"/>
+    <rect x="-32" y="-32" width="64" height="64" transform="rotate(67.5)" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.8"/>
+
+    <!-- Central Floral Rosette -->
+    <circle cx="0" cy="0" r="18" fill="url(#goldGrad)" fill-opacity="0.15" stroke="url(#goldGrad)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="10" fill="url(#goldGrad)" fill-opacity="0.3" stroke="url(#goldGrad)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="4" fill="url(#goldGrad)"/>
+
+    <!-- Radial Petals/Dots -->
+    <circle cx="0" cy="-86" r="2" fill="url(#goldGrad)"/>
+    <circle cx="61" cy="-61" r="2" fill="url(#goldGrad)"/>
+    <circle cx="86" cy="0" r="2" fill="url(#goldGrad)"/>
+    <circle cx="61" cy="61" r="2" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="86" r="2" fill="url(#goldGrad)"/>
+    <circle cx="-61" cy="61" r="2" fill="url(#goldGrad)"/>
+    <circle cx="-86" cy="0" r="2" fill="url(#goldGrad)"/>
+    <circle cx="-61" cy="-61" r="2" fill="url(#goldGrad)"/>
+  </g>
+</svg>
+

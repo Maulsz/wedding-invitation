@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Walimatul 'Urs - Ahmad Fadhil &amp; Aisyah Rahma</title>
+  <meta name="description"
+    content="Undangan Pernikahan Islami Ahmad Fadhil &amp; Aisyah Rahma. Ahad, 20 Desember 2026.">
+  <meta name="keywords" content="undangan pernikahan islami, walimatul urs, digital wedding invitation, ahmad aisyah">
+  <meta name="author" content="Ahmad &amp; Aisyah">
+
+  <!-- Open Graph / Meta Sosial -->
+  <meta property="og:title" content="Walimatul 'Urs - Ahmad Fadhil &amp; Aisyah Rahma">
+  <meta property="og:description"
+    content="Undangan Pernikahan Islami Ahmad Fadhil &amp; Aisyah Rahma. Ahad, 20 Desember 2026.">
+  <meta property="og:image" content="assets/images/couple.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon / Ornament Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/islamic-ornament.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="invitation-locked">
+
+  <!-- Background Audio Element (Islamic Nasheed) -->
+  <audio id="bg-audio" src="assets/audio/nasheed.mp3" loop preload="auto"></audio>
+
+  <!-- ========================================================================
+       OPENING COVER OVERLAY (WALIMATUL 'URS)
+       ======================================================================== -->
+  <div id="opening-cover" role="dialog" aria-modal="true" aria-label="Layar Pembuka Undangan">
+    <div class="cover-wrapper">
+
+      <!-- Top Islamic Badge -->
+      <div class="cover-badge">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L14.39 7.61L20 10L14.39 12.39L12 18L9.61 12.39L4 10L9.61 7.61L12 2Z" />
+        </svg>
+        Walimatul 'Urs
+      </div>
+
+      <!-- Couple Names Heading -->
+      <h1 class="cover-couple">Ahmad &amp; Aisyah</h1>
+
+      <!-- Full-body Couple Watercolor Illustration in Arch -->
+      <div class="cover-illustration-box">
+        <img src="assets/images/couple.jpg" alt="Ilustrasi Mempelai Muslim Ahmad dan Aisyah" width="520" height="620">
+      </div>
+
+      <!-- Recipient Box (Dynamic from ?to=URL param) -->
+      <div class="cover-recipient-box">
+        <p class="cover-recipient-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <div id="guest-recipient-name" class="cover-recipient-name">Tamu Undangan</div>
+      </div>
+
+      <!-- Open Invitation CTA Button -->
+      <button id="btn-open-invitation" class="cover-btn" type="button" aria-label="Buka Undangan Pernikahan">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+        </svg>
+        Buka Undangan
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING AUDIO CONTROLLER (SUBTLE & MINIMAL)
+       ======================================================================== -->
+  <button id="audio-controller-btn" class="audio-controller" type="button" aria-label="Putar Nasheed">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" />
+    </svg>
+  </button>
+
+  <!-- ========================================================================
+       NAVIGASI BAWAH DINONAKTIFKAN (Dapat diaktifkan kembali jika diperlukan)
+  <nav id="bottom-dock" class="bottom-dock" aria-label="Navigasi Halaman Undangan">
+    <a href="#intro" class="dock-item" aria-label="Pembuka">
+      <svg viewBox="0 0 24 24">
+        <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" />
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#couple" class="dock-item" aria-label="Mempelai">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" />
+      </svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#event" class="dock-item" aria-label="Rangkaian Acara">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M19 4H18V2H16V4H8V2H6V4H5C3.89 4 3.01 4.9 3.01 6L3 20C3 21.1 3.89 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z" />
+      </svg>
+      <span>Acara</span>
+    </a>
+    <a href="#story" class="dock-item" aria-label="Kisah Kasih">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM18 20H6V4H18V20ZM8 6H16V8H8V6ZM8 10H16V12H8V10ZM8 14H13V16H8V14Z" />
+      </svg>
+      <span>Kisah</span>
+    </a>
+    <a href="#gallery" class="dock-item" aria-label="Galeri Foto">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M22 16V4C22 2.9 21.1 2 20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16ZM11 12L13.03 14.71L16 11L20 16H8L11 12ZM2 6V20C2 21.1 2.9 22 4 22H18V20H4V6H2Z" />
+      </svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#gift" class="dock-item" aria-label="Tanda Kasih">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M20 6H16.82C17.41 5.09 17.75 4 17.5 3C17.14 1.57 15.68 0.63 14.23 0.89C13.2 1.07 12.35 1.76 12 2.6C11.65 1.76 10.8 1.07 9.77 0.89C8.32 0.63 6.86 1.57 6.5 3C6.25 4 6.59 5.09 7.18 6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6Z" />
+      </svg>
+      <span>Hadiah</span>
+    </a>
+  </nav>
+  ======================================================================== -->
+
+  <!-- ========================================================================
+       MAIN INVITATION CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 1: ISLAMIC INTRODUCTION
+         ---------------------------------------------------------------------- -->
+    <section id="intro" class="invitation-section">
+      <div class="container text-center">
+
+        <!-- Bismillah Calligraphy SVG -->
+        <div class="hero-bismillah reveal-on-scroll">
+          <img src="assets/images/bismillah.svg" alt="Bismillāhir-Raḥmānir-Raḥīm" width="440" height="110">
+        </div>
+
+        <div class="intro-content reveal-on-scroll">
+          <span class="subheading-gold">Mukadimah</span>
+          <h2 class="heading-serif">Assalamu'alaikum Wr. Wb.</h2>
+          <p class="intro-text">
+            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud menyelenggarakan syukuran
+            pernikahan putra-putri kami:
+          </p>
+
+          <!-- Quran Verse Box (Ar-Rum 21) -->
+          <div class="quran-box">
+            <div class="quran-verse-arabic">
+              وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم
+              مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+            </div>
+            <p class="quran-verse-translation">
+              "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+              sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+              sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+            </p>
+            <div class="quran-verse-ref">QS. Ar-Rum: 21</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 2: BRIDE & GROOM (MEMPELAI)
+         ---------------------------------------------------------------------- -->
+    <section id="couple" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Maha Suci Allah yang Menciptakan Makhluk-Nya Berpasangan</span>
+        <h2 class="heading-serif reveal-on-scroll">Kedua Mempelai</h2>
+
+        <div class="couple-grid">
+
+          <!-- Mempelai Pria (Groom) -->
+          <div class="couple-card reveal-on-scroll">
+            <div class="couple-arch-frame">
+              <img src="assets/images/groom.jpg" alt="Ilustrasi Mempelai Pria Ahmad Fadhil" width="480" height="640">
+            </div>
+            <h3 class="couple-name">Ahmad Fadhil, S.T.</h3>
+            <p class="couple-order">Putra pertama dari pasangan</p>
+            <p class="couple-parents">Bapak Ahmad &amp; Ibu Fatimah</p>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="couple-social"
+              aria-label="Instagram Ahmad">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              <span>@ahmadfadhil</span>
+            </a>
+          </div>
+
+          <!-- Connector Motif -->
+          <div class="couple-connector reveal-on-scroll">
+            <span class="couple-ampersand">&amp;</span>
+          </div>
+
+          <!-- Mempelai Wanita (Bride) -->
+          <div class="couple-card reveal-on-scroll">
+            <div class="couple-arch-frame">
+              <img src="assets/images/bride.jpg" alt="Ilustrasi Mempelai Wanita Aisyah Rahma" width="480" height="640">
+            </div>
+            <h3 class="couple-name">Aisyah Rahma, S.Farm.</h3>
+            <p class="couple-order">Putri kedua dari pasangan</p>
+            <p class="couple-parents">Bapak Hasan &amp; Ibu Khadijah</p>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="couple-social"
+              aria-label="Instagram Aisyah">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              <span>@aisyahrahma</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 3: SAVE THE DATE & COUNTDOWN
+         ---------------------------------------------------------------------- -->
+    <section id="date" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Menghitung Hari Bahagia</span>
+        <h2 class="heading-serif reveal-on-scroll">Save The Date</h2>
+
+        <div class="date-highlight-box reveal-on-scroll">
+          <div class="wedding-day">Ahad</div>
+          <div class="wedding-full-date">20 Desember 2026</div>
+
+          <!-- Countdown Timer Grid -->
+          <div class="countdown-grid" role="timer" aria-live="polite">
+            <div class="countdown-card">
+              <span id="cd-days" class="countdown-number">00</span>
+              <span class="countdown-label">Hari</span>
+            </div>
+            <div class="countdown-card">
+              <span id="cd-hours" class="countdown-number">00</span>
+              <span class="countdown-label">Jam</span>
+            </div>
+            <div class="countdown-card">
+              <span id="cd-minutes" class="countdown-number">00</span>
+              <span class="countdown-label">Menit</span>
+            </div>
+            <div class="countdown-card">
+              <span id="cd-seconds" class="countdown-number">00</span>
+              <span class="countdown-label">Detik</span>
+            </div>
+          </div>
+
+          <!-- Expired Notice -->
+          <div id="cd-expired-msg" class="countdown-expired-msg"></div>
+
+          <!-- Add to Calendar CTA -->
+          <button id="btn-add-calendar" class="btn-secondary" type="button" aria-label="Tambahkan ke Google Calendar">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 4H18V2H16V4H8V2H6V4H5C3.89 4 3.01 4.9 3.01 6L3 20C3 21.1 3.89 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V10H19V20ZM19 8H5V6H19V8ZM12 13H17V18H12V13Z" />
+            </svg>
+            Simpan ke Kalender
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 4: EVENT DETAILS (AKAD & RESEPSI)
+         ---------------------------------------------------------------------- -->
+    <section id="event" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Waktu &amp; Tempat Pelaksanaan</span>
+        <h2 class="heading-serif reveal-on-scroll">Rangkaian Acara</h2>
+
+        <div class="events-grid">
+
+          <!-- Event 1: Akad Nikah -->
+          <div class="event-card reveal-on-scroll">
+            <div class="event-card-header">
+              <h3 class="event-title">Akad Nikah</h3>
+              <span class="demo-venue-tag">Contoh Demonstrasi</span>
+            </div>
+
+            <div class="event-datetime-box">
+              <div class="event-date-row">Ahad, 20 Desember 2026</div>
+              <div class="event-time-row">Pukul 08.00 - 10.00 WIB</div>
+            </div>
+
+            <div>
+              <div class="event-venue-name">Masjid Agung Al-Ikhlas</div>
+              <p class="event-venue-address">
+                Jl. Melati Suci No. 12, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12160
+              </p>
+
+              <a href="https://maps.google.com/?q=Masjid+Agung+Al-Ikhlas+Jakarta" target="_blank"
+                rel="noopener noreferrer" class="btn-secondary">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" />
+                </svg>
+                Buka Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Event 2: Resepsi Pernikahan -->
+          <div class="event-card reveal-on-scroll">
+            <div class="event-card-header">
+              <h3 class="event-title">Resepsi Pernikahan</h3>
+              <span class="demo-venue-tag">Contoh Demonstrasi</span>
+            </div>
+
+            <div class="event-datetime-box">
+              <div class="event-date-row">Ahad, 20 Desember 2026</div>
+              <div class="event-time-row">Pukul 11.00 - 14.00 WIB</div>
+            </div>
+
+            <div>
+              <div class="event-venue-name">Sasana Kencana Grand Ballroom</div>
+              <p class="event-venue-address">
+                Jl. Melati Suci No. 15, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12160
+              </p>
+
+              <a href="https://maps.google.com/?q=Sasana+Kencana+Jakarta" target="_blank" rel="noopener noreferrer"
+                class="btn-secondary">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" />
+                </svg>
+                Buka Google Maps
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 5: LOVE STORY TIMELINE
+         ---------------------------------------------------------------------- -->
+    <section id="story" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Jejak Langkah Menuju Ridho-Nya</span>
+        <h2 class="heading-serif reveal-on-scroll">Kisah Kasih Kami</h2>
+
+        <div class="timeline-wrapper">
+
+          <!-- Timeline 1: Ta'aruf -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Januari 2025</div>
+              <h3 class="timeline-title">Ta'aruf</h3>
+              <p class="timeline-desc">
+                Bermula dari perkenalan penuh adab melalui perantara keluarga. Niat ikhlas semata mengharap ridho Allah
+                untuk saling mengenal visi dan misi berumah tangga.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 2: Nadzor -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Juli 2025</div>
+              <h3 class="timeline-title">Nadzor</h3>
+              <p class="timeline-desc">
+                Pertemuan resmi pertama didampingi mahram dan kedua orang tua. Terjalin kecocokan hati, keyakinan
+                spiritual, dan kemantapan langkah menuju jenjang yang lebih serius.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 3: Khitbah -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Januari 2026</div>
+              <h3 class="timeline-title">Khitbah</h3>
+              <p class="timeline-desc">
+                Ikrar kesungguhan hati dalam ikatan khitbah (lamaran) di hadapan keluarga besar kedua belah pihak,
+                menyatukan dua keluarga dalam doa dan restu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 4: Akad Nikah -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Desember 2026</div>
+              <h3 class="timeline-title">Akad Nikah</h3>
+              <p class="timeline-desc">
+                Mengikat janji suci di hadapan Allah SWT, menyempurnakan separuh agama dalam ikatan pernikahan yang
+                halal, barakah, dan diridhoi.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 6: GALLERY (MOMEN BAHAGIA) - HORIZONTAL PHOTO STRIP
+         ---------------------------------------------------------------------- -->
+    <section id="gallery" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Kenangan Indah Penuh Berkah</span>
+        <h2 class="heading-serif reveal-on-scroll">Galeri Momen Bahagia</h2>
+
+      </div>
+
+      <!-- Horizontal Continuous Photo Strip -->
+      <div class="gallery-strip-wrapper" aria-label="Galeri Foto Berjalan">
+        <div class="gallery-strip-track" id="gallery-track">
+
+          <!-- Track Group 1 (Original items) -->
+          <div class="gallery-strip-group">
+            <div class="gallery-item" data-gallery-index="0" role="button" tabindex="0" aria-label="Buket Bunga Mawar Putih dan Eucalyptus">
+              <img src="assets/images/gallery/gallery-1.jpg" alt="Buket Bunga Mawar Putih dan Eucalyptus" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="1" role="button" tabindex="0" aria-label="Buku Nikah &amp; Ikrar Janji Suci">
+              <img src="assets/images/gallery/gallery-2.jpg" alt="Buku Nikah &amp; Ikrar Janji Suci" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="2" role="button" tabindex="0" aria-label="Lengkungan Bunga Watercolor &amp; Lentera Antik">
+              <img src="assets/images/gallery/gallery-3.jpg" alt="Lengkungan Bunga Watercolor &amp; Lentera Antik" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="3" role="button" tabindex="0" aria-label="Detail Gaun Brokat dan Hijab Mempelai Wanita">
+              <img src="assets/images/gallery/gallery-4.jpg" alt="Detail Gaun Brokat dan Hijab Mempelai Wanita" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="4" role="button" tabindex="0" aria-label="Detail Peci Hitam &amp; Busana Akad Mempelai Pria">
+              <img src="assets/images/gallery/gallery-5.jpg" alt="Detail Peci Hitam &amp; Busana Akad Mempelai Pria" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="5" role="button" tabindex="0" aria-label="Potret Bersama Kedua Mempelai">
+              <img src="assets/images/gallery/gallery-6.jpg" alt="Potret Bersama Kedua Mempelai" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track Group 2 (Duplicated for seamless continuous loop) -->
+          <div class="gallery-strip-group" aria-hidden="true">
+            <div class="gallery-item" data-gallery-index="0" role="button" tabindex="0" aria-label="Buket Bunga Mawar Putih dan Eucalyptus">
+              <img src="assets/images/gallery/gallery-1.jpg" alt="Buket Bunga Mawar Putih dan Eucalyptus" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="1" role="button" tabindex="0" aria-label="Buku Nikah &amp; Ikrar Janji Suci">
+              <img src="assets/images/gallery/gallery-2.jpg" alt="Buku Nikah &amp; Ikrar Janji Suci" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="2" role="button" tabindex="0" aria-label="Lengkungan Bunga Watercolor &amp; Lentera Antik">
+              <img src="assets/images/gallery/gallery-3.jpg" alt="Lengkungan Bunga Watercolor &amp; Lentera Antik" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="3" role="button" tabindex="0" aria-label="Detail Gaun Brokat dan Hijab Mempelai Wanita">
+              <img src="assets/images/gallery/gallery-4.jpg" alt="Detail Gaun Brokat dan Hijab Mempelai Wanita" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="4" role="button" tabindex="0" aria-label="Detail Peci Hitam &amp; Busana Akad Mempelai Pria">
+              <img src="assets/images/gallery/gallery-5.jpg" alt="Detail Peci Hitam &amp; Busana Akad Mempelai Pria" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-gallery-index="5" role="button" tabindex="0" aria-label="Potret Bersama Kedua Mempelai">
+              <img src="assets/images/gallery/gallery-6.jpg" alt="Potret Bersama Kedua Mempelai" loading="lazy">
+              <div class="gallery-overlay">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Pratinjau Foto">
+      <div class="lightbox-content-box">
+        <button id="lightbox-close" class="lightbox-close-btn" type="button"
+          aria-label="Tutup Pratinjau">&times;</button>
+        <button id="lightbox-prev" class="lightbox-nav-btn lightbox-prev" type="button"
+          aria-label="Foto Sebelumnya">&#10094;</button>
+
+        <img id="lightbox-image" class="lightbox-img" src="" alt="Pratinjau Foto">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+
+        <button id="lightbox-next" class="lightbox-nav-btn lightbox-next" type="button"
+          aria-label="Foto Selanjutnya">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 7: WEDDING GIFT / TANDA KASIH
+         ---------------------------------------------------------------------- -->
+    <section id="gift" class="invitation-section">
+      <div class="container text-center">
+
+        <span class="subheading-gold reveal-on-scroll">Ungkapan Tanda Kasih</span>
+        <h2 class="heading-serif reveal-on-scroll">Kado &amp; Amplop Digital</h2>
+        <p class="reveal-on-scroll" style="max-width: 540px; margin: 0 auto;">
+          Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, kami
+          menyediakan amplop digital di bawah ini:
+        </p>
+
+        <div class="gifts-grid">
+
+          <!-- Bank BCA -->
+          <div class="gift-card reveal-on-scroll">
+            <div class="bank-logo-text">BANK BCA</div>
+            <div class="bank-account-num">1234-5678-9012</div>
+            <div class="bank-holder-name">a.n. Ahmad Fadhil</div>
+            <button class="btn-copy" type="button" data-copy="123456789012" data-label="Nomor Rekening BCA">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
+              </svg>
+              Salin No. Rekening
+            </button>
+            <div class="demo-venue-tag mt-3" style="display: block; margin-top: 1rem;">Contoh Demonstrasi</div>
+          </div>
+
+          <!-- Bank Syariah Indonesia (BSI) -->
+          <div class="gift-card reveal-on-scroll">
+            <div class="bank-logo-text">BANK SYARIAH INDONESIA</div>
+            <div class="bank-account-num">9876-5432-1098</div>
+            <div class="bank-holder-name">a.n. Aisyah Rahma</div>
+            <button class="btn-copy" type="button" data-copy="987654321098" data-label="Nomor Rekening BSI">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
+              </svg>
+              Salin No. Rekening
+            </button>
+            <div class="demo-venue-tag mt-3" style="display: block; margin-top: 1rem;">Contoh Demonstrasi</div>
+          </div>
+
+          <!-- Pengiriman Kado Fisik -->
+          <div class="gift-card reveal-on-scroll">
+            <div class="bank-logo-text">KIRIM KADO FISIK</div>
+            <p style="font-size: 0.95rem; color: var(--color-forest-green); font-weight: 700; margin-bottom: 0.35rem;">
+              Kediaman Mempelai:
+            </p>
+            <p style="font-size: 0.88rem; color: var(--color-muted-text); line-height: 1.6; margin-bottom: 1rem;">
+              Jl. Melati Suci No. 12, RT 04 / RW 02, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12160<br>
+              (Penerima: Ahmad Fadhil - 0812-3456-7890)
+            </p>
+            <button class="btn-copy" type="button"
+              data-copy="Jl. Melati Suci No. 12, RT 04 / RW 02, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12160 (Penerima: Ahmad Fadhil - 0812-3456-7890)"
+              data-label="Alamat Pengiriman Kado">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
+              </svg>
+              Salin Alamat Lengkap
+            </button>
+            <div class="demo-venue-tag mt-3" style="display: block; margin-top: 1rem;">Contoh Demonstrasi</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 9: CLOSING SECTION & FOOTER
+         ---------------------------------------------------------------------- -->
+    <section id="closing" class="invitation-section">
+      <div class="container text-center">
+
+        <div class="closing-box reveal-on-scroll">
+
+          <div class="closing-illustration">
+            <img src="assets/images/couple.jpg" alt="Potret Indah Kedua Mempelai Ahmad dan Aisyah" width="480"
+              height="580">
+          </div>
+
+          <p class="closing-prayer">
+            "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta
+            memberikan doa restu kepada kedua mempelai."
+          </p>
+
+          <p class="quran-verse-arabic" style="font-size: 1.4rem; margin-bottom: 0.5rem;">
+            جَزَاكُمُ اللهُ خَيْرًا كَثِيْرًا
+          </p>
+          <p style="font-size: 0.95rem; color: var(--color-muted-text); margin-bottom: 1.8rem;">
+            (Jazakumullah Khairan Katsiran)
+          </p>
+
+          <div class="closing-salam">
+            Wassalamu'alaikum Warahmatullahi Wabarakatuh
+          </div>
+
+          <div class="closing-sign-box">
+            <p class="closing-sign-label">Kami yang berbahagia,</p>
+            <h3 class="closing-couple-names">Ahmad &amp; Aisyah</h3>
+            <p style="font-size: 0.95rem; color: var(--color-muted-text); margin-top: 0.4rem;">
+              Beserta segenap keluarga besar kedua mempelai
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ornament">
+        <img src="assets/images/islamic-ornament.svg" alt="Logo Ornamen" width="32" height="32">
+      </div>
+      <p>Walimatul 'Urs Ahmad Fadhil &amp; Aisyah Rahma</p>
+      <p style="margin-top: 0.25rem;">© 2026. Dibuat dengan penuh rasa cinta, keindahan, dan keberkahan.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast-container" aria-live="assertive"></div>
+
+  <!-- JavaScript File -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
